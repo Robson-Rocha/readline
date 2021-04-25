@@ -1,15 +1,15 @@
-﻿using Internal.ReadLine;
-using Internal.ReadLine.Abstractions;
+using Internal.ReadLine2;
+using Internal.ReadLine2.Abstractions;
 
 using System.Collections.Generic;
 
 namespace System
 {
-    public static class ReadLine
+    public static class ReadLine2
     {
         private static List<string> _history;
 
-        static ReadLine()
+        static ReadLine2()
         {
             _history = new List<string>();
         }
@@ -23,14 +23,10 @@ namespace System
         public static string Read(string prompt = "", string @default = "")
         {
             Console.Write(prompt);
-            KeyHandler keyHandler = new KeyHandler(new Console2(), _history, AutoCompletionHandler);
+            KeyHandler keyHandler = new KeyHandler(new Console2(), _history, AutoCompletionHandler, @default);
             string text = GetText(keyHandler);
 
-            if (String.IsNullOrWhiteSpace(text) && !String.IsNullOrWhiteSpace(@default))
-            {
-                text = @default;
-            }
-            else
+            if (String.IsNullOrWhiteSpace(text))
             {
                 if (HistoryEnabled)
                     _history.Add(text);

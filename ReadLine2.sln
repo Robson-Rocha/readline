@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{06FC0E85-E73C-4DC1-B6FD-A583B7B1DFE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLine", "src\ReadLine\ReadLine.csproj", "{9EB290C9-BB52-4B24-9779-5A816AC75E18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLine2", "src\ReadLine2\ReadLine2.csproj", "{9EB290C9-BB52-4B24-9779-5A816AC75E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLine.Demo", "src\ReadLine.Demo\ReadLine.Demo.csproj", "{4C512FD1-A0E8-4908-B0A4-B0D85947716A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLine2.Demo", "src\ReadLine2.Demo\ReadLine2.Demo.csproj", "{4C512FD1-A0E8-4908-B0A4-B0D85947716A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{38C56AEB-DB08-4CBF-AAC0-EBFC2B0EE045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLine.Tests", "test\ReadLine.Tests\ReadLine.Tests.csproj", "{631582D9-EEEA-4F9D-8069-71ECA24ED282}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLine2.Tests", "test\ReadLine2.Tests\ReadLine2.Tests.csproj", "{631582D9-EEEA-4F9D-8069-71ECA24ED282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

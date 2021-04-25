@@ -9,6 +9,6 @@ if [[ $1 ]]; then
 fi
 
 dotnet restore
-dotnet build ./src/ReadLine -c $CONFIGURATION
-dotnet build ./src/ReadLine.Demo -c $CONFIGURATION
-dotnet build ./test/ReadLine.Tests -c $CONFIGURATION
+dotnet build ./src/ReadLine2 -c $CONFIGURATION
+dotnet build ./src/ReadLine2.Demo -c $CONFIGURATION
+dotnet build ./test/ReadLine2.Tests -c $CONFIGURATION

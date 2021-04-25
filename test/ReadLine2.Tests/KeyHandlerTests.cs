@@ -4,12 +4,12 @@ using System.Linq;
 
 using Xunit;
 
-using ReadLine.Tests.Abstractions;
-using Internal.ReadLine;
+using ReadLine2.Tests.Abstractions;
+using Internal.ReadLine2;
 
-using static ReadLine.Tests.ConsoleKeyInfoExtensions;
+using static ReadLine2.Tests.ConsoleKeyInfoExtensions;
 
-namespace ReadLine.Tests
+namespace ReadLine2.Tests
 {
     public class KeyHandlerTests
     {
@@ -17,7 +17,7 @@ namespace ReadLine.Tests
         private List<string> _history;
         private AutoCompleteHandler _autoCompleteHandler;
         private string[] _completions;
-        private Internal.ReadLine.Abstractions.IConsole _console;
+        private Internal.ReadLine2.Abstractions.IConsole _console;
 
         public KeyHandlerTests()
         {

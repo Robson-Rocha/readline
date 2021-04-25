@@ -1,14 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyName>ReadLine.Tests</AssemblyName>
-    <PackageId>ReadLine.Tests</PackageId>
+    <AssemblyName>ReadLine2.Tests</AssemblyName>
+    <PackageId>ReadLine2.Tests</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/ReadLine/ReadLine.csproj" />
+    <ProjectReference Include="../../src/ReadLine2/ReadLine2.csproj" />
   </ItemGroup>
 
   <ItemGroup>

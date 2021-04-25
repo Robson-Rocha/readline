@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-dotnet test ./test/ReadLine.Tests
+dotnet test ./test/ReadLine2.Tests

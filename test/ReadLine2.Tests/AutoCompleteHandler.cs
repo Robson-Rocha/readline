@@ -1,6 +1,6 @@
 using System;
 
-namespace ReadLine.Tests
+namespace ReadLine2.Tests
 {
     class AutoCompleteHandler : IAutoCompleteHandler
     {

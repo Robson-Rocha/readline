@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ConsoleApplication
 {
@@ -6,19 +6,19 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("ReadLine Library Demo");
+            Console.WriteLine("ReadLine2 Library Demo");
             Console.WriteLine("---------------------");
             Console.WriteLine();
 
             string[] history = new string[] { "ls -a", "dotnet run", "git init" };
-            ReadLine.AddHistory(history);
+            ReadLine2.AddHistory(history);
 
-            ReadLine.AutoCompletionHandler = new AutoCompletionHandler();
+            ReadLine2.AutoCompletionHandler = new AutoCompletionHandler();
 
-            string input = ReadLine.Read("(prompt)> ");
+            string input = ReadLine2.Read("(prompt)> ");
             Console.WriteLine(input);
 
-            input = ReadLine.ReadPassword("Enter Password> ");
+            input = ReadLine2.ReadPassword("Enter Password> ");
             Console.WriteLine(input);
         }
     }

@@ -1,9 +1,11 @@
-[![Windows build status](https://ci.appveyor.com/api/projects/status/github/tonerdo/readline?branch=master&svg=true)](https://ci.appveyor.com/project/tonerdo/readline)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![NuGet version](https://badge.fury.io/nu/ReadLine.svg)](https://www.nuget.org/packages/ReadLine)
-# ReadLine
+[![NuGet version](https://badge.fury.io/nu/ReadLine22.svg)](https://www.nuget.org/packages/ReadLine2)
 
-ReadLine is a [GNU Readline](https://en.wikipedia.org/wiki/GNU_Readline) like library built in pure C#. It can serve as a drop in replacement for the inbuilt `Console.ReadLine()` and brings along
+# ReadLine2
+
+> This is a Fork from [https://github.com/tonerdo/readline](https://github.com/tonerdo/readline), with some improvements for default value handling, as proposed in the pull request [#38](https://github.com/tonerdo/readline/pull/38) by [Hesam Faridmehr](https://github.com/faridmehrhesam) in the original repo
+
+ReadLine2 is a [GNU Readline](https://en.wikipedia.org/wiki/GNU_Readline) like library built in pure C#. It can serve as a drop in replacement for the inbuilt `Console.ReadLine()` and brings along
 with it some of the terminal goodness you get from unix shells, like command history navigation and tab auto completion.
 
 It is cross platform and runs anywhere .NET is supported, targeting `netstandard1.3` means that it can be used with .NET Core as well as the full .NET Framework.
@@ -34,18 +36,18 @@ It is cross platform and runs anywhere .NET is supported, targeting `netstandard
 
 ## Installation
 
-Available on [NuGet](https://www.nuget.org/packages/ReadLine/)
+Available on [NuGet](https://www.nuget.org/packages/ReadLine2/)
 
 Visual Studio:
 
 ```powershell
-PM> Install-Package ReadLine
+PM> Install-Package ReadLine2
 ```
 
 .NET Core CLI:
 
 ```bash
-dotnet add package ReadLine
+dotnet add package ReadLine2
 ```
 
 
@@ -54,13 +56,19 @@ dotnet add package ReadLine
 ### Read input from the console
 
 ```csharp
-string input = ReadLine.Read("(prompt)> ");
+string input = ReadLine2.Read("(prompt)> ");
+```
+
+### Read input from the console, with a default value
+
+```csharp
+string password = ReadLine2.ReadPassword("(prompt)> ", "default value");
 ```
 
 ### Read password from the console
 
 ```csharp
-string password = ReadLine.ReadPassword("(prompt)> ");
+string password = ReadLine2.ReadPassword("(prompt)> ");
 ```
 
 _Note: The `(prompt>)` is  optional_
@@ -69,19 +77,19 @@ _Note: The `(prompt>)` is  optional_
 
 ```csharp
 // Get command history
-ReadLine.GetHistory();
+ReadLine2.GetHistory();
 
 // Add command to history
-ReadLine.AddHistory("dotnet run");
+ReadLine2.AddHistory("dotnet run");
 
 // Clear history
-ReadLine.ClearHistory();
+ReadLine2.ClearHistory();
 
 // Disable history
-ReadLine.HistoryEnabled = false;
+ReadLine2.HistoryEnabled = false;
 ```
 
-_Note: History information is persisted for an entire application session. Also, calls to `ReadLine.Read()` automatically adds the console input to history_
+_Note: History information is persisted for an entire application session. Also, calls to `ReadLine2.Read()` automatically adds the console input to history_
 
 ### Auto-Completion
 
@@ -102,7 +110,7 @@ class AutoCompletionHandler : IAutoCompleteHandler
     }
 }
 
-ReadLine.AutoCompletionHandler = new AutoCompletionHandler();
+ReadLine2.AutoCompletionHandler = new AutoCompletionHandler();
 ```
 
 _Note: If no "AutoCompletionHandler" is set, tab autocompletion will be disabled_

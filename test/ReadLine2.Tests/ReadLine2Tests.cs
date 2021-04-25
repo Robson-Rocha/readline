@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Linq;
 using Xunit;
 
-using static System.ReadLine;
+using static System.ReadLine2;
 
-namespace ReadLine.Tests
+namespace ReadLine2.Tests
 {
-    public class ReadLineTests : IDisposable
+    public class ReadLine2Tests : IDisposable
     {
-        public ReadLineTests()
+        public ReadLine2Tests()
         {
             string[] history = new string[] { "ls -a", "dotnet run", "git init" };
             AddHistory(history);
