@@ -7,7 +7,7 @@
     <Authors>Toni Solarin-Sodara, Robson Rocha de Araújo</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyName>ReadLine22</AssemblyName>
+    <AssemblyName>ReadLine2</AssemblyName>
     <PackageId>$(AssemblyName)</PackageId>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
     <PackageTags>readline;gnu;console;shell;cui</PackageTags>
